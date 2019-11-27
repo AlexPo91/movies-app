@@ -4,11 +4,17 @@ import ShowMovies from './ShowMovies'
 export default function MoviesApp(props) {
     
     const [value, setValue] = useState('')
-    const [url, setUrl] = useState('');
+    const [url, setUrl] = useState('')
+    const [option, setOption] = useState('title')
+    const handleRadioChange =event => {
+        setOption(event.target.value)
+    }
+    console.log(option)
+    console.log(value)
     const handleChange = event => {
-        event.preventDefault();
+        event.preventDefault()
         setValue( event.target.value )
-          setUrl (`https://reactjs-cdp.herokuapp.com/movies?sortOrder=asc&search=${value}&searchBy=title&limit=10`)
+          setUrl (`https://reactjs-cdp.herokuapp.com/movies?sortOrder=asc&search=${value}&searchBy=${option}&limit=10`)
         }
     const [movie, setMovie] = useState([])
     const moviesData = (event) => {
@@ -19,7 +25,7 @@ export default function MoviesApp(props) {
         }
     return (
         <React.Fragment>
-            <Header value={value} onChange = {handleChange} url = {url} onClick = {moviesData} />
+            <Header value={value} onRadioChange = {handleRadioChange} onChange = {handleChange} url = {url} onClick = {moviesData}/>
             <ShowMovies movie = {movie} />
         </React.Fragment>
     )
