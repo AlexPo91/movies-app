@@ -19,14 +19,13 @@ console.log(props.option)
 				name="lang"
 				type="radio"
                 value="title"
-                checked
 				onChange={props.onRadioChange}
 			/>
 
 			<input
 				name="lang"
 				type="radio"
-				value="genres"
+                value="genres"
 				onChange={props.onRadioChange}
 			/>
       </div>
