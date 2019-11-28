@@ -1,2 +1,3 @@
-import ButtonSearch from './ButtonSearch'
-export default ButtonSearch
+import ButtonSearch from './ButtonSearch';
+
+export default ButtonSearch;

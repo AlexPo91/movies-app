@@ -1,2 +1,3 @@
-import SortBy from './SortBy'
-export default SortBy
+import SortBy from './SortBy';
+
+export default SortBy;

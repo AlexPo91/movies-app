@@ -1,2 +1,3 @@
-import ShowMovies from './ShowMovies'
-export default ShowMovies
+import ShowMovies from './ShowMovies';
+
+export default ShowMovies;
