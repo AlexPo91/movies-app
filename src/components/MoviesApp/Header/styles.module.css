@@ -1,6 +1,6 @@
 .header {
     height: 400px;
-    background: url('../../netflix-popout.jpg');
+    background: url('../../../assets/netflix-popout.jpg');
     background-position: top;
     background-size: 100%;
 }

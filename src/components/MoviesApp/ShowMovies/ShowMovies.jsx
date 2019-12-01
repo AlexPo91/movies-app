@@ -2,10 +2,10 @@ import React from 'react';
 // import styles from './styles.module.css'
 
 
-export default function ShowMovies(props) {
+export default function ShowMovies({ movie }) {
   return (
     <div className="container">
-      {props.movie.map((item) => (
+      {movie.map((item) => (
         <div key={item.id}>
           <img src={item.poster_path} alt="" />
           <h2 className="title">

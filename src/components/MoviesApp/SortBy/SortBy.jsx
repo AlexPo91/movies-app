@@ -1,16 +1,17 @@
+
 import React from 'react';
 
-export default function SortBy(props) {
+export default function SortBy({ movie, btnSortDate, btnSortRating }) {
   return (
     <div>
       <span>
-        {props.movie.length}
+        {movie.length}
         {' '}
 movies found
       </span>
       <span>Sort by</span>
-      <button onClick={props.btnSortDate}>release date</button>
-      <button onClick={props.btnSortRating}>rating</button>
+      <button onClick={btnSortDate}>release date</button>
+      <button onClick={btnSortRating}>rating</button>
     </div>
   );
 }
