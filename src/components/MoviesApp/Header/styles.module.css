@@ -1,11 +1,11 @@
 .header {
     height: 400px;
     background: url('../../../assets/netflix-popout.jpg');
-    background-position: top;
-    background-size: 100%;
+    background-size: cover ;
 }
 .title {
-    color: red;
+    padding-top: 50px;
+    color: #e64c53;
     text-transform: uppercase;
 }
 .subtitle {
@@ -13,16 +13,51 @@
     font-size: 20px;
     color: white;
 }
-.searchForm {
-    flex-direction: column;
-}
-.buttonPanel {
+
+.button_panel {
+    display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .text {
-    color: white
+    color: white;
+    text-transform: uppercase;
+}
+.content {
+    margin: 0 50px 0;
 }
 
-
-
-
+.search_input {
+    box-sizing: border-box;
+    height: 40px;
+    font-weight: bold;
+    margin-right: 24px;
+    margin-bottom: 6px;
+    background-color: black;
+    border: none;
+    border-bottom: red;
+    color: white;
+    font-size: 20px;
+  }
+  .search_input:focus{
+    outline: none;
+    border-bottom: 4px solid #e64c53;
+  }
+  .radio_toolbar input[type="radio"] {
+    display: none;
+}
+.radio_toolbar label {
+    display: inline-block;
+    padding: 2px 9px;
+    cursor: pointer;
+    margin: 0 5px;
+    background-color: #3b3c3c;
+    color: #fff;
+    text-transform: uppercase;
+}
+.radio_toolbar input[type="radio"]:checked+label {
+    background-color: #e64c53;
+}
+.radio_toolbar label:hover {
+    background-color: #e64c53;
+}

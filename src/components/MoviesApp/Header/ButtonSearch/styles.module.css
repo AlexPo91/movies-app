@@ -1,0 +1,10 @@
+.btn_search {
+    background-color: #e64c53;
+    border: none;
+    color: #fff;
+    padding: 5px 20px;
+    display: inline-block;
+}
+.btn_search:hover {
+    background-color: #df373f;
+}

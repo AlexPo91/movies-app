@@ -1,6 +1,30 @@
-.wrap {
-
+.film {
+    padding: 12px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc(100% / 3);
+    vertical-align: top;
 }
-.card {
+.films_Wrapper {
+    margin-left: 24px;
+    margin-right: 24px;
+    text-align: left;
+}
+.film img {
     width: 100%;
-}
+  }
+  .film_years {
+      padding: 5px;
+      border: 1px solid grey;
+      border-radius: 5px;
+      margin-right: 10px;
+  }
+  .film_title {
+    color: grey;
+    font-size: 1.5rem;
+
+  }
+  .film_genres {
+    color: grey;
+    font-size: 1.25rem;
+  }

@@ -9,6 +9,7 @@ export default function MoviesApp() {
   const [value, setValue] = useState('');
   const [option, setOption] = useState(SEARCH_OPTIONS.TITLE);
   const [movie, setMovie] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleRadioChange = (nextOption) => {
     setOption(nextOption);
   };
@@ -29,6 +30,7 @@ export default function MoviesApp() {
     const sortedByData = [...movie].sort((a, b) => new Date(b.release_date).getFullYear() - new Date(a.release_date).getFullYear());
     setMovie(sortedByData);
   };
+
   return (
     <>
       <Header
@@ -38,7 +40,7 @@ export default function MoviesApp() {
         onClick={moviesData}
       />
       <SortBy btnSortRating={btnSortRating} btnSortDate={btnSortDate} movie={movie} />
-      <ShowMovies movie={movie} />
+      <ShowMovies movie={movie} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </>
   );
 }

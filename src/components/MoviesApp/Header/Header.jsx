@@ -9,31 +9,37 @@ export default function Header({
 }) {
   return (
     <div className={styles.header}>
-      <h1 className={styles.title}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>
             Search Films
-      </h1>
-      <form onSubmit={onChange}>
-        <span className={styles.subtitle}>
+        </h1>
+        <form onSubmit={onChange}>
+          <span className={styles.subtitle}>
                 find your movie
-        </span>
-        <div className={styles.searchForm}>
-          <div>
-            <RadioButton
-              value={option === SEARCH_OPTIONS.TITLE}
-              onChange={() => onRadioChange(SEARCH_OPTIONS.TITLE)}
-            />
-            <RadioButton
-              value={option === SEARCH_OPTIONS.GENRES}
-              onChange={() => onRadioChange(SEARCH_OPTIONS.GENRES)}
-            />
-          </div>
-          <input type="text" value={value} onChange={onChange} />
-          <div className={styles.buttonPanel}>
-            <span className={styles.text}>Search By</span>
+          </span>
+          <div className={styles.search_form}>
+            <input type="text" value={value} onChange={onChange} className={styles.search_input} />
             <ButtonSearch onClick={onClick} />
+            <div className={styles.button_panel}>
+              <span className={styles.text}>Search By</span>
+              <div className={styles.radio_toolbar}>
+                <RadioButton
+                  id="radio1"
+                  value={option === SEARCH_OPTIONS.TITLE}
+                  onChange={() => onRadioChange(SEARCH_OPTIONS.TITLE)}
+                />
+                <label htmlFor="radio1">{SEARCH_OPTIONS.TITLE}</label>
+                <RadioButton
+                  id="radio2"
+                  value={option === SEARCH_OPTIONS.GENRES}
+                  onChange={() => onRadioChange(SEARCH_OPTIONS.GENRES)}
+                />
+                <label htmlFor="radio2">{SEARCH_OPTIONS.GENRES}</label>
+              </div>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

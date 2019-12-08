@@ -1,0 +1,34 @@
+.menu_sort {
+    background-color: #f4f4f5;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.movies_quantity {
+    margin-left: 50px;
+}
+.sorted {
+    margin-right: 50px;
+    display: flex;
+}
+.text {
+    margin-right: 20px;
+}
+.radio_toolbar_sort input[type="radio"] {
+    display: none;
+}
+.radio_toolbar_sort label {
+    display: inline-block;
+    padding: 2px 9px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #333;
+    text-transform: uppercase;
+}
+.radio_toolbar_sort input[type="radio"]:checked+label {
+    color: #e64c53;
+
+}
+.radio_toolbar_sort label:hover {
+    color: #e64c53;
+}
