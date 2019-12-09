@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 
 export default function ModalInfo({ filmPreview, setIsModalOpen }) {
@@ -32,3 +33,6 @@ $
     </div>
   );
 }
+ModalInfo.propTypes = {
+  setIsModalOpen: PropTypes.func.isRequired,
+};

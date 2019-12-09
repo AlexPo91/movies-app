@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { SEARCH_OPTIONS } from '../../../constants/option';
 import styles from './styles.module.css';
 import ButtonSearch from './ButtonSearch';
@@ -25,13 +26,13 @@ export default function Header({
               <div className={styles.radio_toolbar}>
                 <RadioButton
                   id="radio1"
-                  value={option === SEARCH_OPTIONS.TITLE}
+                  checked={option === SEARCH_OPTIONS.TITLE}
                   onChange={() => onRadioChange(SEARCH_OPTIONS.TITLE)}
                 />
                 <label htmlFor="radio1">{SEARCH_OPTIONS.TITLE}</label>
                 <RadioButton
                   id="radio2"
-                  value={option === SEARCH_OPTIONS.GENRES}
+                  checked={option === SEARCH_OPTIONS.GENRES}
                   onChange={() => onRadioChange(SEARCH_OPTIONS.GENRES)}
                 />
                 <label htmlFor="radio2">{SEARCH_OPTIONS.GENRES}</label>
@@ -43,3 +44,10 @@ export default function Header({
     </div>
   );
 }
+Header.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  onRadioChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  option: PropTypes.string.isRequired,
+};

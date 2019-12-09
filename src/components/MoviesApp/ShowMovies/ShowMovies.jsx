@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import ModalInfo from '../ModalInfo/ModalInfo';
 
@@ -39,3 +40,7 @@ export default function ShowMovies({
     </div>
   );
 }
+ShowMovies.propTypes = {
+  setIsModalOpen: PropTypes.func.isRequired,
+  isModalOpen: PropTypes.bool.isRequired,
+};
